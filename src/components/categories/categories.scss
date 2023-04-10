@@ -1,0 +1,33 @@
+.categories {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .link {
+      // background-color: burlywood;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+      // overflow: hidden;
+
+      img {
+        max-width: 300px;
+        object-fit: cover;
+        transition: all 0.1s ease-in;
+        // overflow: hidden;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

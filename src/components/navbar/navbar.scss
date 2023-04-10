@@ -1,14 +1,93 @@
 .navbar {
   flex: 1;
   display: flex;
-  justify-content: space-between;
-  background-color: rgba(218, 218, 218, 0.526);
-  // color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(28, 28, 28);
+  color: white;
+  height: 80px;
+
+  .wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .left {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      a {
+        color: white;
+      }
+
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+    }
+    .center {
+      letter-spacing: 5px;
+      font-weight: 700;
+      font-size: 30px;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+
+      .cart {
+        position: relative;
+        font-size: 23px;
+        // background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .num {
+          position: absolute;
+          right: -15px;
+          top: -15px;
+          color: white;
+          background-color: rebeccapurple;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          padding: 2px;
+          font-size: 11px;
+        }
+      }
+    }
+  }
 
   ul {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+    animation: stickyHeader 0.3s ease;
+    // backwards
+    // transition: all 1s ease;
+  }
+}
+
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

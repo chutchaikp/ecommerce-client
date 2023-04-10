@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment } from '../../redux/counterSlice';
+import Banner from '../../components/banner/Banner.jsx';
+import Categories from '../../components/categories/Categories.jsx';
+import Products from '../../components/products/Products.jsx';
+import Newsletter from '../../components/newsletter/Newsletter.jsx';
 import './home.scss';
 const Home = () => {
   const { num } = useSelector((state) => state.counter);
@@ -7,10 +11,14 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1> Home </h1>
-      {num}
-      <button onClick={() => dispatch(increment())}>INC</button>
-      <button onClick={() => dispatch(decrement())}>DEC</button>
+      {/* <Banner /> */}
+
+      {/* <Categories /> */}
+
+      {/* <h2>POPULAR PRODUCT</h2> */}
+      <Products />
+
+      {/* <Newsletter /> */}
     </div>
   );
 };
