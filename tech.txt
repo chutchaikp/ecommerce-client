@@ -1,0 +1,12 @@
+### Tech
+- React JS
+- Strapi - Headless CMS
+= Stripe - Payment gateway
+
+### Related Repo
+https://github.com/chutchaikp/ecommerce-server
+https://github.com/chutchaikp/ecommerce-client
+
+### Learn from Youtube
+
+https://www.youtube.com/watch?v=GKYr5eWm8EY&list=PLJUyh5ULdyuAwe4HoMNJAVm7GAAddxwFT&index=1&t=201s
