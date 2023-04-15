@@ -1,5 +1,31 @@
 .product {
   width: 200px;
-  background-color: rgba(222, 184, 135, 0.507);
+  // background-color: rgba(222, 184, 135, 0.507);
   margin-bottom: 1rem;
+  display: flex;
+
+  .link {
+    cursor: pointer;
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .image {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.1);
+        img {
+          width: 100%;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      .details {
+      }
+    }
+  }
 }

@@ -1,20 +1,15 @@
 import Product from './Product.jsx';
 import './products.scss';
-const Products = () => {
+const Products = ({ data }) => {
   return (
     <div className="products">
-      <div className="title">POPULAR PRODUCT</div>
+      {/* <div className="title">POPULAR PRODUCT</div> */}
       <div className="wrapper">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {data &&
+          data.length > 0 &&
+          data.map((product, idx) => {
+            return <Product key={idx} data={product} />;
+          })}
       </div>
     </div>
   );
