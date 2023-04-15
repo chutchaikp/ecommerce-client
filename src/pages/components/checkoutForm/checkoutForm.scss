@@ -1,0 +1,19 @@
+.checkoutForm {
+  width: 400px;
+  form {
+    button {
+      margin-top: 10px;
+      padding: 10px 30px;
+      border: none;
+      background-color: rgb(13, 136, 185);
+      color: white;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    .err {
+      color: red;
+      margin-top: 10px;
+    }
+  }
+}

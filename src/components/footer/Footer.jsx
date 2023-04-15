@@ -9,9 +9,9 @@ const Footer = () => {
         <div className="col2">
           <div className="title">About</div>
           <div className="text">
-            Voluptatem accusantium doloremque laudantium, totam rem aperiam,
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto
-            beatae vitae dicta sunt explicabo eaque ipsa quae ab illo.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non animi
+            illum ipsa adipisci aspernatur magnam ut, reiciendis veritatis
+            veniam eius!
           </div>
         </div>
         <div className="col2">
@@ -19,17 +19,17 @@ const Footer = () => {
           <div className="c-item">
             <FaLocationArrow />
             <div className="text">
-              Kayaloram Rd, Punnamada, Kottankulangara, Alappuzha, Kerala,
-              688006
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              necessitatibus? 10100
             </div>
           </div>
           <div className="c-item">
             <FaMobileAlt />
-            <div className="text">Phone: 0471 272 0261</div>
+            <div className="text">Phone: 0123 456 7890</div>
           </div>
           <div className="c-item">
             <FaEnvelope />
-            <div className="text">Email: store@jsdev.com</div>
+            <div className="text">Email: store@dev.com</div>
           </div>
         </div>
         <div className="col1">

@@ -33,8 +33,10 @@ const Navbar = () => {
 
   useEffect(() => {
     setShowSearch(false);
+    setShowCart(false);
     window.scrollTo(0, 0);
   }, [location]);
+
   useEffect(() => {
     const _subtotal = items.reduce(
       (acc, item) => acc + item.product.attributes.price * item.quantity,
@@ -75,7 +77,7 @@ const Navbar = () => {
 
           <div className="cart-icon">
             <MdShoppingCart onClick={() => setShowCart(true)} />
-            <div className="num">{items.length}</div>
+            {items.length > 0 && <div className="num">{items.length}</div>}
           </div>
         </div>
       </div>
@@ -87,7 +89,7 @@ const Navbar = () => {
             <div className="wrapperx">
               <div className="cartHeader">
                 <h3>SHOPPING CART</h3>
-                <MdClose onClick={() => setShowCart(true)} />
+                <MdClose onClick={() => setShowCart(false)} />
               </div>
               <div className="cartItems">
                 {/* No product in the Cart */}
@@ -160,13 +162,16 @@ const Navbar = () => {
                 )}
               </div>
             </div>
-            <div className="cartFooter">
-              <div className="sub-total">
-                <span>SUBTOTAL</span>
-                <span>{toCurrencyFormated(subtotal)}</span>
+            {items.length > 0 && (
+              <div className="cartFooter">
+                <div className="sub-total">
+                  <span>SUBTOTAL</span>
+                  <span>{toCurrencyFormated(subtotal)}</span>
+                </div>
+                {/* <button>CHECKOUT</button> */}
+                <Link to="/payment">CHECKOUT</Link>
               </div>
-              <button>CHECKOUT</button>
-            </div>
+            )}
           </div>
         </div>
       )}

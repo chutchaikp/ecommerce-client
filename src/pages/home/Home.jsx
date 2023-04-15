@@ -31,14 +31,22 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* <Banner /> */}
+      <div className="home-content">
+        <Banner />
 
-      {/* <Categories /> */}
+        <div className="category-items">
+          <Categories />
+        </div>
 
-      {/* <h2>POPULAR PRODUCT</h2> */}
-      {products && products.length > 0 && <Products data={products} />}
+        {/* <h2>POPULAR PRODUCT</h2> */}
+        {products && products.length > 0 && (
+          <div className="product-items">
+            <Products data={products} />
+          </div>
+        )}
 
-      {/* <Newsletter /> */}
+        <Newsletter />
+      </div>
     </div>
   );
 };
